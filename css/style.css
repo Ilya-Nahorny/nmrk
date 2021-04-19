@@ -1,0 +1,146 @@
+@import "../css/reset.css";
+@import "../css/fullpage.css";
+.container .nav {
+  width: 100%;
+  height: 120px;
+  background-color: rgba(255, 255, 255, 0.226);
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+@keyframes logo-mvng {
+  0% {
+    left: calc(50vw);
+    top: calc(50vh);
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+  }
+  50% {
+    left: calc(50vw - 200px);
+    top: calc(50vh - 200px);
+    opacity: 1;
+    width: 400px;
+    height: 400px;
+  }
+  100% {
+    left: -20px;
+    top: -40px;
+    position: fixed;
+  }
+}
+.container .nav #logo {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  z-index: 1;
+  animation-name: logo-mvng;
+  animation-duration: 5s;
+  left: -20px;
+  top: -40px;
+}
+.container .nav .nav-links_wrapper {
+  position: absolute;
+  display: flex;
+  width: 50%;
+  height: 120px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container .nav .nav-links_wrapper .nav-link {
+  text-decoration: none;
+  color: #2F2D74;
+  font-weight: bold;
+  font-size: 25px;
+  -webkit-text-stroke: 0.3px #fff;
+}
+.container .nav .nav-links_wrapper .nav-link:hover {
+  text-shadow: 0px 0px 2px #d7a82f;
+}
+.container .nav .menuBtn {
+  display: block;
+  position: absolute;
+  z-index: 20;
+  width: 35px;
+  height: 28px;
+  top: 35px;
+  right: 35px;
+}
+.container .nav .menuBtn .menuBtn_stick {
+  transition: 0.5s;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+.container .nav .menuBtn .menuBtn_stick2, .container .nav .menuBtn .menuBtn_stick3 {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.container .nav .menuBtn .menuBtn_stick4 {
+  bottom: 0;
+}
+.container .nav .menuBtn-act {
+  display: block;
+  position: absolute;
+  width: 35px;
+  height: 30px;
+  top: 35px;
+  right: 35px;
+}
+.container .nav .menuBtn-act .menuBtn_stick {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition: 0.5s;
+}
+.container .nav .menuBtn-act .menuBtn_stick2, .container .nav .menuBtn-act .menuBtn_stick3 {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.container .nav .menuBtn-act .menuBtn_stick2 {
+  transform: translateY(-50%) rotateZ(45deg);
+}
+.container .nav .menuBtn-act .menuBtn_stick3 {
+  transform: translateY(-50%) rotateZ(-45deg);
+}
+.container .nav .menuBtn-act .menuBtn_stick4, .container .nav .menuBtn-act .menuBtn_stick1 {
+  bottom: 0;
+  opacity: 0;
+}
+.container #fullpage #firstPage {
+  background-image: url("../img/first-screen.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.container #fullpage #firstPage .white-filter {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.507);
+  position: relative;
+}
+.container #fullpage #slide1 {
+  background: url(../img/1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.container #fullpage #slide3 {
+  background: url(../img/3.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.container #fullpage #slide4 {
+  background: url(../img/4.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.container #fullpage .fp-controlArrow.fp-next {
+  border-width: 0;
+}
+.container #fullpage .fp-controlArrow.fp-next::before {
+  content: "";
+  color: white;
+  display: block;
+}
